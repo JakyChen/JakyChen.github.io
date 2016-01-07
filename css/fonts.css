@@ -1,0 +1,28 @@
+h1 {
+	font-family: Bebas;
+	font-weight: normal;
+	font-size: 50px;
+}
+
+h2 {
+	font-family: Roboto;
+	font-weight: normal;
+	font-size: 24;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src:url(../fonts/BEBAS.ttf);
+}
+
+p {
+	font-family: Roboto;
+	font-weight: normal;
+	font-size: 14px;
+	color:#666;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src:url(../fonts/Roboto-Medium.ttf);
+}
