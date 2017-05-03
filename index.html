@@ -20,10 +20,25 @@
 	/* Variables */
 	setInterval(function () {timer()}, 4000);
 	var counter = 0;
+	var scroll_pos = 0;
 	var rellax = new Rellax('.rellax');
 	
+	
+	$('#about').scroll(function() { 
+		scroll_pos = $(this).scrollTop();
+		
+		$("#subtitle").innerHTML = scroll_pos;
+		if(scroll_pos > 210) {
+			alert("Nav bar was pressed");
+			$("nav a").css('color', 'black');
+		} else {
+			$("nav a").css('color', 'white');
+		}
+	});
+	
 	function lol(){
-		alert("Nav bar was pressed");
+		/*$("#mobile-nav").css('visibility', 'visible');*/
+		/*CHANGE CSS PROPERTY NOT ID*/
 	}
 	
 	function about(){
@@ -54,15 +69,25 @@
 <body style="margin:0px">
 
 <header>
-	<div class="mobilenav"><a href="https://www.google.ca" onclick="lol();"><img src="img/nav2.png" width="100%" /></a></div>
+	<div class="mobilenav"><a onclick="lol();"><img src="img/nav2.png" width="100%" /></a></div>
+    
     <nav>
     	<ul>
-    		<li><a href="#about" onClick="about();">about</a></li>
+    		<li><a href="#" onClick="about();">about</a></li>
             <li><a href="#">experience</a></li>
             <li><a href="#">projects</a></li>
             <li><a href="#">contact</a></li>
         </ul>
     </nav>
+    
+    <mobile-nav id="mobile-nav">
+    	<ul>
+    		<li><a href="#" onClick="about();">about</a></li>
+            <li><a href="#">experience</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </mobile-nav>
 </header>
 
 <div class="parallax rellax">
@@ -98,8 +123,12 @@
     </div>
 </section>
 
-<section class= "parallax2 rellax">
-</section>
+<div class= "parallax2 rellax" style="z-index:0">
+</div>
+
+<footer style="text-align: right">
+Created using Bootstrap, JQuery, JQueryUI, and Rellax 
+</footer>
 
 </body>
 </html>
