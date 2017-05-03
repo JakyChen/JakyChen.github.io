@@ -1,0 +1,232 @@
+body {
+  margin: 0px;
+}
+
+p {
+  margin-top: 0px;
+}
+
+
+header {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hiddenbar {
+  height: 0px;
+  background-color: #000;
+  opacity: .5;
+  animation-duration: 3s;
+  animation-name: headerpop;
+}
+
+nav {
+  float: right;
+  margin: 20px 20px 0px 0px;
+  position: fixed;
+  right: 0px;
+  transition: .5s;
+}
+
+nav ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav a{
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(255,255,255,0.7);
+  padding: 0 25px;
+  transition: .35s;
+}
+
+nav a:hover {
+  color: rgba(255,255,255,1);
+}
+
+section {
+  padding: 15px 0;
+  width: 100%;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url(../img/bg.jpg);
+
+    /* Set a specific height */
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	font-family: 'Open Sans', sans-serif;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url(../img/testo.jpg);
+
+    /* Set a specific height */
+    height: 800px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	font-family: 'Open Sans', sans-serif;
+}
+.mobilenav {
+  float: right;
+  margin: 10px 10px 0 0px;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  right: 0px;
+  width: 50px;
+}
+
+.mobilenav:hover {
+  width: 75px;
+}
+
+.portrait {
+	border-radius: 50%;
+}
+
+.subtitle {
+  margin: 0 auto;
+  padding-top: 200px;
+  text-align: center;
+  font-size: 24px;
+  color: rgba(255,255,255,1);
+  clear: both;
+  animation-name: portrait;
+  animation-duration: .7s;
+}
+
+#subtitle {
+  font-size: 50px;
+  font-weight: 400;
+  animation-duration: 4s;
+  animation-name: subtitle;
+  animation-iteration-count: infinite;
+}
+
+.text {
+  margin: auto;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 15px;
+  font-weight: 400;
+}
+
+
+.animateLeft {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes headerpop {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+	transform: scaleY(100px);
+	opacity: 1;
+  }
+}
+
+@keyframes portrait {
+  from {
+	transform: translateY(-50px);
+    opacity: 0;
+  }
+  
+  to {
+	opacity: 1;
+  }
+}
+/*
+@keyframes subtitle {
+  0% {
+  	opacity: 0;
+  }
+  20% {
+  	opacity: 1;
+  }
+  80% {
+  	opacity: 1;
+  }
+  90% {
+  	opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+*/
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+  
+  50% {
+    margin-left: 50%;
+    width: 100%;
+  }
+  
+  65% {
+  	margin-left: 55%;
+	width: 100%;
+  }
+  
+  75% {
+  	margin-left: 55%;
+	width: 100%;
+  }
+}
+
+@keyframes textfade {
+  from {
+    color: rgba(0,0,0,0.7);
+  }
+  to {
+    color: #FFF;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+	opacity: 0;
+	visibility: hidden;
+  }
+  
+  .mobilenav {
+	opacity: .7;
+    visibility: visible;
+  }
+  
+  
+}
