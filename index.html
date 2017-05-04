@@ -21,7 +21,7 @@
 <body>
 
 <header>
-	<div class="mobilenav"><a onclick="lol();"><img src="img/nav2.png" width="100%" /></a></div>
+	<div class="mobilenav"><a onclick="toggleMobileNav();"><img src="img/nav2.png" width="100%" style="-webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.7)" /></a></div>
     
     <nav>
     	<ul>
@@ -104,13 +104,13 @@ Created using Bootstrap, JQuery, JQueryUI, and Rellax
 		}
 	}
 	
-	function lol(){
+	function toggleMobileNav(){
 		if ($("#mobile-nav").css('visibility') == 'hidden'){
+			$("#mobile-nav").css('webkitAnimationName', 'mobileNavIn');
 			$("#mobile-nav").css('visibility', 'visible');
-			$("#mobile-nav").css('webkitAnimationName', 'mobileNav');
-			$("#mobile-nav").css('webkitAnimationDuration', '0.7s');
 			$("#mobile-nav").css('opacity', '1');
 		}else{
+			$("#mobile-nav").css('webkitAnimationName', 'mobileNavOut');
 			$("#mobile-nav").css('visibility', 'hidden');
 			$("#mobile-nav").css('opacity', '0');
 		}
