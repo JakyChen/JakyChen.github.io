@@ -42,7 +42,7 @@ section {
   clear: both;
   font-size: 50px;
   font-weight: 400;
-  animation-name: portrait;
+  opacity: 0;
   animation-duration: .7s;
 }
 
