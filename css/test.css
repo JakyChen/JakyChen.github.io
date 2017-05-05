@@ -4,6 +4,7 @@ body {
 
 p {
   margin-top: 0px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -14,138 +15,22 @@ header {
   font-family: 'Open Sans', sans-serif;
 }
 
-nav {
-  float: right;
-  margin: 20px 20px 0px 0px;
-  position: fixed;
-  z-index: 1;
-  right: 0px;
-  transition: .5s;
-}
-
-nav a{
-  text-decoration: none;
-  display: inline-block;
-  color: white;
-  opacity: 0.7;
-  padding: 0 25px;
-  transition: .35s;
-  text-shadow: 1px 1px .2em #000;
-}
-
-nav ul {
-  list-style: none;
-  text-decoration: none;
-  margin: 0 auto;
-}
-
-nav ul li {
-  display: inline;
-  float: left;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-nav a:hover {
-  opacity: 1;
-}
-
-/*Mobile Nav*/
-mobile-nav {
-  float: right;
-  margin: 80px 0px 0px 0px;
-  position: fixed;
-  z-index: 1;
-  right: 0px;
-  opacity: 1;
-  visibility: hidden;
-  transition: .5s;
-  animation-duration: 0.7s;
-}
-
-mobile-nav a{
-  text-decoration: none;
-  display: inline-block;
-  height: 45px;
-  color: white;
-  opacity: 0.7;
-  font-size: 20px;
-  padding: 0 15px;
-  transition: .35s;
-  text-shadow: 1px 1px .2em #000;
-}
-
-mobile-nav ul {
-  list-style: none;
-  text-decoration: none;
-  margin: 0 auto;
-}
-mobile-nav ul li {
-  text-align: right;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-mobile-nav a:hover {
-  opacity: 1;
-}
-
 /*Section*/
 section {
   padding: 15px 0;
   width: 100%;
 }
 
-.parallax { 
-    /* The image used */
-    background-image: url(../img/bg.jpg);
-
-    /* Set a specific height */
-    height: 800px; 
-
-    /* Create the parallax scrolling effect */
+.parallax {
+    height: 100%; 
+	
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+	position: relative;
 	
 	font-family: 'Open Sans', sans-serif;
-}
-
-.parallax2 { 
-    /* The image used */
-    background-image: url(../img/testo8.jpg);
-
-    /* Set a specific height */
-    height: 800px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	
-	font-family: 'Open Sans', sans-serif;
-}
-.mobilenav {
-  float: right;
-  margin: 10px 10px 0 0px;
-  transition: .5s;
-  opacity: 0;
-  z-index: 2;
-  visibility: hidden;
-  position: fixed;
-  right: 0px;
-  width: 50px;
-}
-
-.mobilenav:hover {
-  width: 65px;
-  opacity: 1;
-}
-
-.portrait {
-	border-radius: 50%;
 }
 
 .subtitle {
@@ -155,14 +40,10 @@ section {
   font-size: 24px;
   color: rgba(255,255,255,1);
   clear: both;
-  animation-name: portrait;
-  animation-duration: .7s;
-}
-
-#subtitle {
   font-size: 50px;
   font-weight: 400;
-  animation-duration: 4s;
+  animation-name: portrait;
+  animation-duration: .7s;
 }
 
 .text {
@@ -171,12 +52,6 @@ section {
   font-family: 'Open Sans', sans-serif;
   padding: 0 15px;
   font-weight: 400;
-}
-
-
-.animateLeft {
-  animation-duration: 3s;
-  animation-name: ;
 }
 
 @keyframes portrait {
@@ -190,28 +65,7 @@ section {
   }
 }
 
-@keyframes mobileNavIn {
-  from {
-	transform: translateX(50px);
-    opacity: 0;
-  }
-  
-  to {
-	opacity: 0.7;
-  }
-}
-
-@keyframes mobileNavOut {
-  from {
-	opacity: 0.7;
-  }
-  
-  to {
-	transform: translateX(50px);
-    opacity: 0;
-  }
-}
-
+/* KEY FRAME REFERENCE FOR ANIMATION
 @keyframes  {
   from {
     margin-left: 100%;
@@ -237,33 +91,8 @@ section {
   	margin-left: 55%;
 	width: 100%;
   }
-}
+}*/
 
-@keyframes textfade {
-  from {
-    color: rgba(0,0,0,0.7);
-  }
-  to {
-    color: #FFF;
-  }
-}
-
+/*Mobile responsive behaviour*/
 @media screen and (max-width: 768px) {
-  nav {
-	opacity: 0;
-	visibility: hidden;
-  }
-  
-  /*
-  mobile-nav {
-  	visibility: visible;
-	animation-duration: 0.7s;
-  	animation-name: mobileNav;
-  }*/
-  
-  .mobilenav {
-	opacity: 0.7;
-    visibility: visible;
-	z-index: 1;
-  }
 }
