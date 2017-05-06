@@ -53,6 +53,20 @@ section {
   font-weight: 400;
 }
 
+#icons {
+  padding: 10px 0px 10px 10px;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+#icons > img {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 2%;
+}
+
 @keyframes portrait {
   from {
 	transform: translateY(-50px);
