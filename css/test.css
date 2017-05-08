@@ -60,7 +60,7 @@ section {
   border-style: solid;
 }
 
-#icons > img {
+#icons > a {
   display: inline-block;
   vertical-align: top;
   text-align: center;
